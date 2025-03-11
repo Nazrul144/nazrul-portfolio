@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Poppins  } from "next/font/google";
+import { Geist, Geist_Mono, Merriweather  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 
@@ -12,11 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
+const merriweather = Merriweather({
   subsets: ["latin"],  // Supports Latin characters
-  weight: ["400", "500", "600", "700"], // Specify font weights
-  variable: "--font-poppins", // Custom CSS variable
-  display: "swap",  // Ensures text remains visible during load
+  weight: ["300", "400", "700", "900"], // Specify font weights
+  variable: "--font-merriweather", // Custom CSS variable
+  display: "swap",  
 });
 
 export const metadata = {
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
         <Navbar/>
         {children}

@@ -15,11 +15,38 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Link from "next/link";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
-
 const Navbar = (props) => {
+
+  const navItems = [
+    {
+      title: 'Home',
+      path: '/'
+    },
+    {
+      title: 'About',
+      path: '/about'
+    },
+    {
+      title: 'Services',
+      path: '/services'
+    },
+    {
+      title: 'Projects',
+      path: '/projects'
+    },
+    {
+      title: 'Skills',
+      path: '/skills'
+    },
+    {
+      title: 'Education',
+      path: '/education'
+    },
+  ];
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -34,10 +61,10 @@ const Navbar = (props) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((navItem) => (
+          <ListItem key={navItem.title} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={navItem.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -65,12 +92,12 @@ const Navbar = (props) => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
               MUI
             </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
-              ))}
+            <Box  sx={{ display: { xs: "none", sm: "block" } }}>
+              <div className="flex space-x-4 text-xl">
+              {
+                navItems?.map((navItem)=> <Link  key={navItem.title} href={navItem.path} >{navItem.title}</Link>)
+              }
+              </div>
             </Box>
           </Toolbar>
         </AppBar>
