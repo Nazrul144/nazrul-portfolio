@@ -85,7 +85,7 @@ const Navbar = (props) => {
     <div>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar className="lg:px-20" component="nav" sx={{ backgroundColor: '#333' }} >
+        <AppBar className="lg:px-20 shadow-none" component="nav" sx={{ backgroundColor: "transparent" }}  >
           <Toolbar>
             <IconButton
               color="inherit"
@@ -97,7 +97,7 @@ const Navbar = (props) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-              <Link className="font-bold" href={'/'}><span className="text-orange-600">N</span>azrul.</Link>
+              <Link className="font-bold" href={'/'}><span className="text-red-600">N</span>azrul.</Link>
             </Typography>
             <Box  sx={{ display: { xs: "none", sm: "block" } }}>
               <div className="flex space-x-6 text-xl font-bold sm:font-bold">
