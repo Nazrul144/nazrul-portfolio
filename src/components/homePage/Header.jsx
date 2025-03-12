@@ -7,7 +7,8 @@ import React, { useEffect, useState } from "react";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-
+import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { BsLinkedin } from "react-icons/bs";
 
 const Header = () => {
 
@@ -162,16 +163,25 @@ const Header = () => {
               }
             </button>
 
-            <div className="flex items-center">
+            <div className="flex items-center gap-12">
               <div>
               <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
               <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
-                Download CV <FileDownload className="font-extrabold" />
+                Download CV <FileDownload  />
               </a>
             </button>
               </div>
-              <div className="mt-12">
-                Icon
+              <div className="mt-12 flex gap-4 items-center">
+             <a href="https://github.com/Nazrul144" target="_blank"><FaGithub className="text-2xl hover:bg-pink-600 rounded-full hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out hover:text-3xl"/></a>
+
+             <a href="https://www.linkedin.com/in/nazrul-islam-a6080730b" target="_blank"><FaLinkedinIn className="text-2xl hover:bg-pink-600  hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"/></a>
+
+              <a href="https://x.com/Nazrul211002144" target="_blank"><FaTwitter className="text-2xl hover:bg-pink-600 rounded-full hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out hover:text-3xl"/></a>
+
+              <a href="https://www.facebook.com/profile.php?id=100007196595674" target="_blank"><FaFacebook className="text-2xl hover:bg-pink-600 rounded-full hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out hover:text-3xl"/></a>
+
+              <a href="https://www.youtube.com/@GKWORLD-kw1zv" target="_blank"><FaYoutube className="text-2xl hover:bg-pink-600 rounded-full hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out hover:text-3xl"/>
+              </a>
               </div>
             </div>
           </div>
