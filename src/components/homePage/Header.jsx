@@ -138,7 +138,7 @@ const Header = () => {
         }}
       />
       <div className="px-4 lg:px-20">
-        <div className="lg:flex  items-center lg:gap-32 mt-20">
+        <div className="lg:flex  items-center lg:gap-32 lg:mt-20">
           <div className="lg:w-[50%]">
             <h1 className="font-extrabold text-4xl">
               Hi, I am <span className="text-red-600 ">Nazrul</span> Islam
@@ -162,13 +162,20 @@ const Header = () => {
               }
             </button>
 
-            <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
+            <div className="flex items-center">
+              <div>
+              <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
               <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
                 Download CV <FileDownload className="font-extrabold" />
               </a>
             </button>
+              </div>
+              <div className="mt-12">
+                Icon
+              </div>
+            </div>
           </div>
-          <div className="relative w-90 h-90">
+          <div className="relative w-90 h-90 mt-10 lg:mt-1">
             <Image className="z-10 relative brightness-50" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
             <motion.div
               className="absolute -inset-[4px] rounded-full "
