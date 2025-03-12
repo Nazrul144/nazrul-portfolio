@@ -162,7 +162,7 @@ const Header = () => {
               }
             </button>
 
-            <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold mt-2 flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out">
+            <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
               <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
                 Download CV <FileDownload className="font-extrabold" />
               </a>
