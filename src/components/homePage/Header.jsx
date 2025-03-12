@@ -1,10 +1,13 @@
 "use client";
+
+import { FileDownload } from "@mui/icons-material";
 import { useTime, useTransform, motion, useSpring } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+
 
 const Header = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -139,13 +142,17 @@ const Header = () => {
             <h2 className="mt-4 ">Frontend Web Developer</h2>
             <p className="text-justify mt-4">
               Hi, I’m Nazrul Islam, a passionate Frontend Web Developer from Bangladesh. I specialize in building seamless,
-              user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js, Firebase,
-              Express, and MongoDB. With a strong focus on performance, usability, and design, I craft web experiences that
-              enhance user engagement. I thrive in collaborative environments, aligning technical solutions with project goals to
-              deliver innovative and efficient applications. I’m always open to new opportunities and collaborations in web
-              development. Feel free to connect with me at nazrulislam.cse28@gmail.com to discuss potential projects.
+              user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
+              Firebase, Express, and MongoDB. With a strong focus on performance, usability, and design, I craft web experiences
+              that enhance user engagement. I thrive in collaborative environments, aligning technical solutions with project
+              goals to deliver innovative and efficient applications. I’m always open to new opportunities and collaborations in
+              web development. Feel free to connect with me at nazrulislam.cse28@gmail.com to discuss potential projects.
             </p>
-            <Button type="primary" shape="round" icon={<DownloadOutlined />} size={size} />
+            <button className="border-[1px] text-white rounded-full border-red-600 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center animate__animated animate__lightSpeedInLeft">
+              <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
+                Download CV <FileDownload className="font-extrabold" />
+              </a>
+            </button>
           </div>
           <div className="relative w-90 h-90">
             <Image className="z-10 relative brightness-50" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
