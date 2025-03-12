@@ -7,8 +7,9 @@ import React, { useEffect, useState } from "react";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-import { FaFacebook, FaGithub, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
+import Typewriter from "typewriter-effect";
 
 const Header = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -140,9 +141,25 @@ const Header = () => {
         <div className="lg:flex  items-center lg:gap-32 lg:mt-20">
           <div className="lg:w-[50%]">
             <h1 className="font-extrabold text-4xl">
-              Hi, I am <span className="text-red-600 ">Nazrul</span> Islam
+              <Typewriter
+                options={{
+                  strings: ['Hi, I am <span class="text-red-600">Nazrul</span> Islam'],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                }}
+              />
             </h1>
-            <h2 className="mt-4 ">Frontend Web Developer</h2>
+            <h1 className="mt-4">
+              <Typewriter
+                options={{
+                  strings: ['<span class="text-red-600 font-extrabold shadow-2xl">Frontend</span> Web Developer'],
+                  autoStart: true,
+                  loop: true,
+                  delay: 75,
+                }}
+              />
+            </h1>
             <p className="text-justify mt-4">
               Hi, I’m Nazrul Islam, a passionate Frontend Web Developer from Bangladesh. I specialize in building seamless,
               user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
@@ -174,31 +191,23 @@ const Header = () => {
               </div>
               <div className="mt-12 flex gap-4 items-center">
                 <a href="https://github.com/Nazrul144" target="_blank">
-                  <FaGithub
-                    className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl"/>
+                  <FaGithub className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
                 </a>
 
                 <a href="https://www.linkedin.com/in/nazrul-islam-a6080730b" target="_blank">
-                  <TiSocialLinkedinCircular
-                    className="text-3xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl"/>
+                  <TiSocialLinkedinCircular className="text-3xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
                 </a>
 
                 <a href="https://x.com/Nazrul211002144" target="_blank">
-                  <FaTwitter
-                    className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl"
-                  />
+                  <FaTwitter className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
                 </a>
 
                 <a href="https://www.facebook.com/profile.php?id=100007196595674" target="_blank">
-                  <FaFacebook
-                    className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl"
-                  />
+                  <FaFacebook className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
                 </a>
 
                 <a href="https://www.youtube.com/@GKWORLD-kw1zv" target="_blank">
-                  <FaYoutube
-                    className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl"
-                  />
+                  <FaYoutube className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
                 </a>
               </div>
             </div>
