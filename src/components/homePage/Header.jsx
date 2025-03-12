@@ -3,13 +3,17 @@
 import { FileDownload } from "@mui/icons-material";
 import { useTime, useTransform, motion, useSpring } from "framer-motion";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 
 
 const Header = () => {
+
+  const [showFullText, setShowFullText] = useState(false);
+
+ 
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
 
@@ -144,11 +148,21 @@ const Header = () => {
               Hi, I’m Nazrul Islam, a passionate Frontend Web Developer from Bangladesh. I specialize in building seamless,
               user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
               Firebase, Express, and MongoDB. With a strong focus on performance, usability, and design, I craft web experiences
-              that enhance user engagement. I thrive in collaborative environments, aligning technical solutions with project
-              goals to deliver innovative and efficient applications. I’m always open to new opportunities and collaborations in
-              web development. Feel free to connect with me at nazrulislam.cse28@gmail.com to discuss potential projects.
+              that enhance user engagement. {
+                showFullText && (
+                  <span> I thrive in collaborative environments, aligning technical solutions with project
+                  goals to deliver innovative and efficient applications. I’m always open to new opportunities and collaborations in
+                  web development. Feel free to connect with me at nazrulislam.cse28@gmail.com to discuss potential projects.</span>
+                )
+              }
             </p>
-            <button className="border-[1px] text-white rounded-full border-red-600 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center animate__animated animate__lightSpeedInLeft">
+            <button onClick={()=> setShowFullText(!showFullText)} className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold  cursor-pointer mt-4 hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out">
+              {
+               showFullText ? "Read Less" : "Read More"
+              }
+            </button>
+
+            <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold mt-2 flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out">
               <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
                 Download CV <FileDownload className="font-extrabold" />
               </a>
