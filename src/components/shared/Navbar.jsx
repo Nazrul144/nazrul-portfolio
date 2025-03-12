@@ -16,9 +16,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const drawerWidth = 240;
 const Navbar = (props) => {
+
+  const pathName = usePathname();
 
   const navItems = [
     {
@@ -57,14 +60,18 @@ const Navbar = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        <span className="font-bold"><span className="text-red-600">N</span>azrul</span>
       </Typography>
       <Divider />
       <List>
         {navItems.map((navItem) => (
           <ListItem key={navItem.title} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={navItem.title} />
+            <ListItemButton sx={{ textAlign: "center", justifyContent: "center", display: "flex", alignItems: "center",  }}>
+              <Link className={` tong relative group text-xl hover:text-red-600 ease-in-out duration-300  ${pathName === navItem.path ? "text-red-600" : ""}`} href={navItem.path}>
+              <ListItemText primary={navItem.title}>{navItem.title}
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+              </ListItemText>
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -78,7 +85,7 @@ const Navbar = (props) => {
     <div>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar component="nav">
+        <AppBar className="lg:px-20" component="nav" sx={{ backgroundColor: '#333' }} >
           <Toolbar>
             <IconButton
               color="inherit"
@@ -90,13 +97,16 @@ const Navbar = (props) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
-              MUI
+              <Link className="font-bold" href={'/'}><span className="text-orange-600">N</span>azrul.</Link>
             </Typography>
             <Box  sx={{ display: { xs: "none", sm: "block" } }}>
-              <div className="flex space-x-4 text-xl">
+              <div className="flex space-x-6 text-xl font-bold sm:font-bold">
               {
-                navItems?.map((navItem)=> <Link  key={navItem.title} href={navItem.path} >{navItem.title}</Link>)
+                navItems?.map((navItem)=> <Link className={`relative group text-xl hover:text-red-600 ease-in-out duration-300 ${pathName === navItem.path ? "text-red-600" : ""}`}  key={navItem.title} href={navItem.path} >{navItem.title}
+                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>)
               }
+          
               </div>
             </Box>
           </Toolbar>
