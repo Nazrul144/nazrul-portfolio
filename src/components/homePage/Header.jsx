@@ -138,9 +138,9 @@ const Header = () => {
         }}
       />
       <div className="px-4 lg:px-20">
-        <div className="lg:flex  items-center lg:gap-32 lg:mt-20">
+        <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-20">
           <div className="lg:w-[50%]">
-            <h1 className="font-extrabold text-4xl">
+            <h1 className="font-extrabold text-xl lg:text-4xl mt-6">
               <Typewriter
                 options={{
                   strings: ['Hi, I am <span class="text-red-600">Nazrul</span> Islam'],
@@ -153,7 +153,7 @@ const Header = () => {
             <h1 className="mt-4">
               <Typewriter
                 options={{
-                  strings: ['<span class="text-red-600 font-extrabold shadow-2xl">Frontend</span> Web Developer'],
+                  strings: ['<span class="text-red-600 lg:font-extrabold shadow-2xl">Frontend</span> Web Developer'],
                   autoStart: true,
                   loop: true,
                   delay: 75,
