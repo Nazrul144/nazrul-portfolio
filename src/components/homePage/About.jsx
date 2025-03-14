@@ -58,6 +58,40 @@ const About = () => {
                         Additionally, I have worked as a web developer since 2023, with hands-on experience in e-commerce project
                         development and training in web development at Decode Lab.
                       </p>
+                      <table className="table-auto w-full mt-8">
+                        <thead>
+                          <tr className="border-b">
+                            <th className="text-left p-4 text-gray-100">Duration</th>
+                            <th className="text-left p-4 text-gray-100">Experience</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2023-Present</td>
+                            <td className="p-4 text-gray-100">Web Development</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2023</td>
+                            <td className="p-4 text-gray-100">Trained in Web Development at Decode Lab</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">6 Months</td>
+                            <td className="p-4 text-gray-100">Worked in a team to develop an E-commerce project</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2019-2022</td>
+                            <td className="p-4 text-gray-100">Video Editing</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2019-2021</td>
+                            <td className="p-4 text-gray-100">Photoshop</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2018-2024</td>
+                            <td className="p-4 text-gray-100">Teaching English</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   ),
                 },
