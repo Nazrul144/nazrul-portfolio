@@ -32,6 +32,11 @@ body {
   animation: fireAnimation 1.5s infinite alternate;
 }
 
+
+
+
+
+
 /* @keyframes fireAnimation {
   0% {
     transform: scale(1);
