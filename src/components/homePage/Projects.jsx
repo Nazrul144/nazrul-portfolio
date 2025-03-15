@@ -33,8 +33,10 @@ const Projects = () => {
           >
             01
           </h1>
-          <h1 className="font-extrabold text-2xl lg:text-4xl mt-4 mb-6">Full Stack Project</h1>
+          <h1 className="font-extrabold text-2xl lg:text-4xl mt-4">Full Stack Project</h1>
+          <h3 className="font-extrabold text-xl lg:text-2xl mt-4 mb-6">Website:</h3>
           <p className="text-justify">A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.</p>
+          <h4 className="text-white mt-4">Technologies:</h4>
         </div>
         <div className="lg:w-[50%] relative">
           <Swiper
@@ -75,6 +77,6 @@ const projectData = [
   { id: 2, title: "Full Stack Project", name: 'ShopEase', description: "An e-commerce platform that allows users to search, filter, and sort products (high to low and low to high) with pagination. Users can find a wide range of products, including mobiles, cameras, laptops, keyboards, TVs, watches, headphones, and more. The website provides a seamless shopping experience with advanced filtering options.", technologies:"Tailwind CSS, DaisyUI, JavaScript, Firebase, React.js, Node.js, Express.js, MongoDB, Firebase Hosting" },
 
   { id: 4, title: "Full Stack Project", name:"ReadShop", description: "A full-stack e-commerce project developed as a team. This website mainly focus on books where users can create a wishlist, browse and search for books, and explore various filtering options. The site includes features like a payment method, user reviews, live chat for customer support, and an admin dashboard for managing content. The platform is fully responsive, providing a seamless experience across devices.", technologies:"Tailwind CSS, Material-UI, AntDesign, shadcn, JavaScript, React.js, Next.js, Node.js, MongoDB, Vercel"},
-  
+
   { id: 3, title: "Frontend Project", name: "HolidayHive", description: "A front-end project that allows users to easily book hotels for their holiday travels. The platform offers a user-friendly interface for selecting and reserving accommodations, helping travelers find the perfect stay for their vacations. The project features a dark theme for enhanced user experience and is fully responsive across all devices." },
 ];

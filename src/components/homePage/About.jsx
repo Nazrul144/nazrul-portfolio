@@ -4,7 +4,21 @@ import { Card, Tabs } from "antd";
 import { motion } from "framer-motion";
 
 const skills = [
-  "/skills/html.png", "/skills/css.png", "/skills/tailwind.png", "/skills/bootstrap.png", "/skills/material.png",  "/skills/antDesign.png", "/skills/javaScript.png", "/skills/react.png", "/skills/nextjs.png", "/skills/angular.png", "/skills/redux.png",  "/skills/nodejs.png", "/skills/firebase.webp", "/skills/MongoDB.png", "/skills/MySql.png"
+  "/skills/html.png",
+  "/skills/css.png",
+  "/skills/tailwind.png",
+  "/skills/bootstrap.png",
+  "/skills/material.png",
+  "/skills/antDesign.png",
+  "/skills/javaScript.png",
+  "/skills/react.png",
+  "/skills/nextjs.png",
+  "/skills/angular.png",
+  "/skills/redux.png",
+  "/skills/nodejs.png",
+  "/skills/firebase.webp",
+  "/skills/MongoDB.png",
+  "/skills/MySql.png",
 ];
 
 const About = () => {
@@ -12,13 +26,15 @@ const About = () => {
     <div className="px-4 lg:px-20">
       <h1>This is about section</h1>
       <div className="lg:flex gap-6 mt-6 lg:mt-16">
-        <div className="lg:w-[40%] border-2 border-red-500">
-          <div className="fireBorder ml-14 lg:ml-32">
-            <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={500} height={500} />
+        <div className="lg:w-[40%] ">
+          <div className="fireBorder ml-14 lg:ml-32 lg:mt-20">
+            <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={600} height={600} />
           </div>
         </div>
-        <div className="lg:w-[60%] border-2 border-red-300">
-          <h1 className="text-xl lg:text-4xl font-extrabold mb-4"><span className="text-red-600">About</span> Me</h1>
+        <div className="lg:w-[60%]">
+          <h1 className="text-xl lg:text-4xl font-extrabold mb-4">
+            <span className="text-red-600">About</span> Me
+          </h1>
           <p className="text-justify text-gray-100 text-xs">
             I'm Nazru Islam, a MERN Stack Web Developer with expertise in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind
             CSS, and Material UI. I have hands-on experience building scalable web applications using the MERN stack, alongside
@@ -29,10 +45,10 @@ const About = () => {
           {/*Tabs*/}
           <div className="mt-10">
             <Tabs
-              className="border-[1px] border-gray-100"
+              className="border-[1px] border-t-gray-100 border-r"
               defaultActiveKey="1"
               centered
-              tabBarStyle={{ color: "red", fontWeight: "bold" }} 
+              tabBarStyle={{ color: "red", fontWeight: "bold" }}
               items={[
                 {
                   label: (
@@ -57,7 +73,7 @@ const About = () => {
                             <motion.div
                               animate={{ rotate: [10, -10, 10] }} // Tilting motion
                               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                              style={{originX: 0.5, originY: 0.5}}
+                              style={{ originX: 0.5, originY: 0.5 }}
                             >
                               <Image src={skill} alt="Image" width={100} height={100} />
                             </motion.div>
@@ -96,8 +112,12 @@ const About = () => {
                             <td className="p-4 text-gray-100">Web Development</td>
                           </tr>
                           <tr className="border-b">
-                            <td className="p-4 text-pink-500 font-bold">2023</td>
+                            <td className="p-4 text-pink-500 font-bold">2024 July-2024 Dec</td>
                             <td className="p-4 text-gray-100">Trained in Web Development at Decode Lab</td>
+                          </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2023-2024</td>
+                            <td className="p-4 text-gray-100">UI/UX</td>
                           </tr>
                           <tr className="border-b">
                             <td className="p-4 text-pink-500 font-bold">6 Months</td>
@@ -147,6 +167,13 @@ const About = () => {
                             <td className="p-4 text-pink-500 font-bold">2025</td>
                             <td className="p-4 text-gray-100">B.Sc. in Computer Science and Engineering</td>
                           </tr>
+                          <tr className="border-b">
+                            <td className="p-4 text-pink-500 font-bold">2018</td>
+                            <td className="p-4 text-gray-100">
+                              IELTS (International English Language Testing System) - Band Score: 6.5
+                            </td>
+                          </tr>
+
                           <tr className="border-b">
                             <td className="p-4 text-pink-500 font-bold">2016</td>
                             <td className="p-4 text-gray-100">Diploma in Computer Science and Engineering</td>
