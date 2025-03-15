@@ -24,28 +24,25 @@ const skills = [
 const About = () => {
   return (
     <div className="px-4 lg:px-20">
-      <h1>This is about section</h1>
-      <div className="lg:flex gap-6 mt-6 lg:mt-16">
+      <div className="lg:flex gap-6 mt-2 lg:mt-4">
         <div className="lg:w-[40%] ">
           <div className="fireBorder ml-14 lg:ml-32 lg:mt-20">
-            <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={600} height={600} />
+            <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={1000} height={1000}  layout="intrinsic" />
           </div>
+          <h1 className="text-center mt-4 font-bold animate-pulse bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+  MERN Stack Developer</h1>
         </div>
         <div className="lg:w-[60%]">
-          <h1 className="text-xl lg:text-4xl font-extrabold mb-4">
+          <h1 className="text-xl lg:text-3xl font-extrabold mb-2">
             <span className="text-red-600">About</span> Me
           </h1>
-          <p className="text-justify text-gray-100 text-xs">
-            I'm Nazru Islam, a MERN Stack Web Developer with expertise in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind
-            CSS, and Material UI. I have hands-on experience building scalable web applications using the MERN stack, alongside
-            Firebase for backend services. I am passionate about developing user-friendly and impactful applications, with a
-            strong focus on collaboration, continuous learning, and contributing to meaningful projects. I thrive in team-oriented
-            environments where I can grow and make a difference.
+          <p className="text-justify text-gray-100 text-sm">
+          I'm Nazru Islam, a MERN Stack Web Developer skilled in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind CSS, and Material UI. I specialize in building scalable web applications and enjoy creating user-friendly, impactful solutions. Passionate about continuous learning, collaboration, and contributing to meaningful projects, I thrive in team environments.
           </p>
           {/*Tabs*/}
-          <div className="mt-10">
+          <div className="mt-4 mb-4">
             <Tabs
-              className="border-[1px] border-t-gray-100 border-r"
+              className="border-[1px] border-gray-100 rounded-lg"
               defaultActiveKey="1"
               centered
               tabBarStyle={{ color: "red", fontWeight: "bold" }}
@@ -59,7 +56,7 @@ const About = () => {
                   key: "1",
                   children: (
                     <div className="text-white">
-                      <div className="grid grid-cols-5 gap-4">
+                      <div className="grid grid-cols-5 gap-4 px-8 py-4">
                         {skills?.map((skill, index) => (
                           <Card
                             key={index}
@@ -75,7 +72,7 @@ const About = () => {
                               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                               style={{ originX: 0.5, originY: 0.5 }}
                             >
-                              <Image src={skill} alt="Image" width={100} height={100} />
+                              <Image src={skill} alt="Image" width={80} height={80} />
                             </motion.div>
                           </Card>
                         ))}

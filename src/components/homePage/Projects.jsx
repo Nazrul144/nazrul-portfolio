@@ -33,10 +33,11 @@ const Projects = () => {
           >
             01
           </h1>
-          <h1 className="font-extrabold text-2xl lg:text-4xl mt-4">Full Stack Project</h1>
-          <h3 className="font-extrabold text-xl lg:text-2xl mt-4 mb-6">Website:</h3>
-          <p className="text-justify">A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.</p>
+          <h1 className="font-extrabold text-2xl lg:text-3xl mt-4">Full Stack Project</h1>
+          <h3 className="font-extrabold text-xl lg:text-2xl mt-3 mb-6">Website:</h3>
+          <p className="text-justify text-gray-100 text-sm">A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.</p>
           <h4 className="text-white mt-4">Technologies:</h4>
+          <hr className="mb-4 mt-3"/>
         </div>
         <div className="lg:w-[50%] relative">
           <Swiper

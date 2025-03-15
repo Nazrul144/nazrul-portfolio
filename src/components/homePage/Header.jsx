@@ -160,7 +160,7 @@ const Header = () => {
                 }}
               />
             </h1>
-            <p className="text-justify mt-4">
+            <p className="text-justify mt-4 text-sm text-gray-100">
               Hi, I’m Nazrul Islam, a passionate Frontend Web Developer from Bangladesh. I specialize in building seamless,
               user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
               Firebase, Express, and MongoDB. With a strong focus on performance, usability, and design, I craft web experiences
