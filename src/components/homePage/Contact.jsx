@@ -26,12 +26,12 @@ const Contact = () => {
         })
         .then(
           () => {
+            audio.play();
             setMessage("Message has been sent successfully!")
             form.current.reset()
-            audio.play()
             setTimeout(()=>{
                 setMessage("")
-            },3000)
+            },5000)
             console.log('SUCCESS!');
           },
           (error) => {
@@ -80,7 +80,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="lg:max-w-[50%] border-[1px] border-white shadow-4xl  rounded-lg">
+        <div className="lg:max-w-[50%] border-[0.5px] border-white shadow-4xl  rounded-lg mt-6">
           <h1 className="text-center font-extrabold text-white text-3xl mt-12">
             <span className="text-red-600">Contact</span> Me
           </h1>
