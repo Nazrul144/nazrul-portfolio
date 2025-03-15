@@ -1,11 +1,45 @@
-import React from "react";
+'use client'
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { Button } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 
+//Email Js:
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
+
+    const [message, setMessage] = useState("")
+
+    const audio = new Audio('/success.m4a');
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs
+        .sendForm('service_a5654uh', 'template_je41myo', form.current, {
+          publicKey: 'EyGO7y0039nyztZLQ',
+        })
+        .then(
+          () => {
+            setMessage("Message has been sent successfully!")
+            form.current.reset()
+            audio.play()
+            setTimeout(()=>{
+                setMessage("")
+            },3000)
+            console.log('SUCCESS!');
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    };
+
   return (
     <div className="px-4 lg:px-20">
       <div className="lg:flex gap-12">
@@ -54,7 +88,7 @@ const Contact = () => {
           <div>
             {/* Form*/}
             <div className="bg-transparent  my-12 rounded-lg lg:px-16 ">
-              <form>
+              <form ref={form} onSubmit={sendEmail}>
                 <div className="grid grid-cols-2 gap-5 w-full">
                   <input
                     className="px-4 py-2 rounded-lg outline-none border-[1px] border-white shadow-4xl text-sm"
@@ -96,6 +130,11 @@ const Contact = () => {
                   Send Message
                 </Button>
                 </div>
+                <h1 className="text-center mt-4">
+                    {
+                        message? <span className="text-green-400">{message}</span>: ""
+                    }
+                </h1>
               </form>
             </div>
           </div>
