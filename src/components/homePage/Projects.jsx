@@ -43,18 +43,11 @@ const Projects = () => {
                 <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/1.jpg'} alt="Project1" width={500} height={500}/>
             </SwiperSlide>
             <SwiperSlide>
-            <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/1.jpg'} alt="Project1" width={500} height={500}/>
+            <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/2.png'} alt="Project1" width={500} height={500}/>
             </SwiperSlide>
             <SwiperSlide>
             <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/3.jpg'} alt="Project1" width={500} height={500}/>
             </SwiperSlide>
-            <SwiperSlide>
-            <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/1.jpg'} alt="Project1" width={500} height={500}/>
-            </SwiperSlide>
-            <SwiperSlide>
-            <Image className="lg:ml-28 lg:mt-12" src={'/projects_image/1.jpg'} alt="Project1" width={500} height={500}/>
-            </SwiperSlide>
-           
           </Swiper>
         </div>
       </div>
