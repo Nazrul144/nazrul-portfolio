@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const skills = [
   "/skills/html.png", "/skills/css.png", "/skills/react.png", "/skills/javascript.png", 
-  "/skills/firebase.png", "/skills/material.png", "/skills/angular.png", "/skills/nextJs.png", "/skills/mongodb.png", "/skills/MySql.png", "/skills/antDesign.png"
+  "/skills/firebase.webp", "/skills/material.png", "/skills/angular.png", "/skills/nextJs.png", "/skills/mongodb.png", "/skills/MySql.png", "/skills/antDesign.png"
 ];
 
 const About = () => {
@@ -44,11 +44,11 @@ const About = () => {
                   key: "1",
                   children: (
                     <div className="text-white">
-                      <div className="flex gap-4">
+                      <div className="grid grid-cols-5 gap-4">
                         {skills?.map((skill, index) => (
                           <Card
                             key={index}
-                            className="w-[15%] aspect-square border border-white/30 hover:border-orange-500 rounded-lg p-6 transition-transform duration-300 group hover:scale-110 flex items-center justify-center"
+                            className="w-full aspect-square border border-white/30 hover:border-orange-500 rounded-lg p-6 transition-transform duration-300 group hover:scale-110 flex items-center justify-center"
                             variant="borderless"
                             style={{
                               backgroundColor: "transparent",
