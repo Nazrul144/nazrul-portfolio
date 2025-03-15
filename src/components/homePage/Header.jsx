@@ -66,7 +66,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
+    <div className="px-4">
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -140,7 +140,7 @@ const Header = () => {
       <div className="px-4 lg:px-20">
         <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-20">
           <div className="lg:w-[50%]">
-            <h1 className="font-extrabold text-xl lg:text-4xl mt-6">
+            <h1 className="font-extrabold text-xl lg:text-4xl mt-6 px-4 lg:px-0">
               <Typewriter
                 options={{
                   strings: ['Hi, I am <span class="text-red-600">Nazrul</span> Islam'],
@@ -150,7 +150,7 @@ const Header = () => {
                 }}
               />
             </h1>
-            <h1 className="mt-4">
+            <h1 className="mt-4 px-4 lg:px-0">
               <Typewriter
                 options={{
                   strings: ['<span class="text-red-600 lg:font-extrabold shadow-2xl">Frontend</span> Web Developer'],
@@ -160,7 +160,7 @@ const Header = () => {
                 }}
               />
             </h1>
-            <p className="text-justify mt-4 text-sm text-gray-100">
+            <p className="text-justify mt-4 text-sm text-gray-100 px-4 lg:px-0">
               Hi, I’m Nazrul Islam, a passionate Frontend Web Developer from Bangladesh. I specialize in building seamless,
               user-friendly web applications using modern technologies like HTML, CSS, Tailwind CSS, JavaScript, React, Next.js,
               Firebase, Express, and MongoDB. With a strong focus on performance, usability, and design, I craft web experiences
@@ -176,12 +176,12 @@ const Header = () => {
             </p>
             <button
               onClick={() => setShowFullText(!showFullText)}
-              className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold  cursor-pointer mt-4 hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
+              className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold  cursor-pointer mt-4 hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out ml-4 lg:ml-0"
             >
               {showFullText ? "Read Less" : "Read More"}
             </button>
 
-            <div className="flex items-center gap-12">
+            <div className="flex items-center gap-8 ml-1 lg:ml-0 ">
               <div>
                 <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
                   <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
