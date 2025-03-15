@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 
 const Page = () => {
   const time = useTime();
-  const rotate = useTransform(time, [0, 3000], [0, 360], {
+  const rotate = useTransform(time, [0, 8000], [50, 360], {
     clamp: false,
   });
   const rotatingBg = useTransform(rotate, (r) => {
@@ -30,8 +30,8 @@ const Page = () => {
         <Projects/>
       <div className="flex justify-center items-center gap-10">
         <div className="relative">
-          <button className="z-10 relative bg-pink-800 rounded-full px-4 py-2 cursor-pointer hover:bg-green-400 duration-300 ease-in-out">Motion1</button>
-          <motion.div className="absolute  -inset-[2px] rounded-full" style={{ background: rotatingBg, filter: pulseBg}} />
+          <button className="z-10 relative bg-orange-600 rounded-full px-4 py-2 cursor-pointer hover:bg-green-400 duration-300 ease-in-out text-3xl font-extrabold">Latest Projects</button>
+          <motion.div className="absolute  -inset-1 rounded-full" style={{ background: rotatingBg, filter: pulseBg}} />
 
          
 
