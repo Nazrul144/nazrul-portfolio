@@ -4,8 +4,7 @@ import { Card, Tabs } from "antd";
 import { motion } from "framer-motion";
 
 const skills = [
-  "/skills/html.png", "/skills/css.png", "/skills/react.png", "/skills/javascript.png", 
-  "/skills/firebase.webp", "/skills/material.png", "/skills/angular.png", "/skills/nextJs.png", "/skills/mongodb.png", "/skills/MySql.png", "/skills/antDesign.png"
+  "/skills/html.png", "/skills/css.png", "/skills/tailwind.png", "/skills/bootstrap.png", "/skills/material.png",  "/skills/antDesign.png", "/skills/javaScript.png", "/skills/react.png", "/skills/nextjs.png", "/skills/angular.png", "/skills/redux.png",  "/skills/nodejs.png", "/skills/firebase.webp", "/skills/MongoDB.png", "/skills/MySql.png"
 ];
 
 const About = () => {
