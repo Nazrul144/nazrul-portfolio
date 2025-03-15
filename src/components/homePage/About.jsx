@@ -1,6 +1,12 @@
 "use client";
 import Image from "next/image";
-import { Tabs } from "antd";
+import { Card, Tabs } from "antd";
+import { motion } from "framer-motion";
+
+const skills = [
+  "/skills/html.png", "/skills/css.png", "/skills/react.png", "/skills/javascript.png", 
+  "/skills/firebase.png"
+];
 
 const About = () => {
   return (
@@ -27,7 +33,7 @@ const About = () => {
               className="border-[1px] border-gray-100"
               defaultActiveKey="1"
               centered
-              tabBarStyle={{ color: "red", fontWeight: "bold" }} // ট্যাবের টেক্সট লাল করা হয়েছে
+              tabBarStyle={{ color: "red", fontWeight: "bold" }} 
               items={[
                 {
                   label: (
@@ -38,7 +44,27 @@ const About = () => {
                   key: "1",
                   children: (
                     <div className="text-white">
-                      <p>⚡ React.js, Next.js, JavaScript, Tailwind CSS, Firebase, MongoDB</p>,
+                      <div className="flex gap-4">
+                        {skills?.map((skill, index) => (
+                          <Card
+                            key={index}
+                            className="w-[15%] aspect-square border border-white/30 hover:border-orange-500 rounded-lg p-6 transition-transform duration-300 group hover:scale-110 flex items-center justify-center"
+                            variant="borderless"
+                            style={{
+                              backgroundColor: "transparent",
+                              color: "white",
+                            }}
+                          >
+                            <motion.div
+                              animate={{ rotate: [10, -10, 10] }} // Tilting motion
+                              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                              style={{originX: 0.5, originY: 0.5}}
+                            >
+                              <Image src={skill} alt="Image" width={100} height={100} />
+                            </motion.div>
+                          </Card>
+                        ))}
+                      </div>
                     </div>
                   ),
                 },
