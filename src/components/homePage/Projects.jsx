@@ -56,6 +56,11 @@ const Projects = () => {
                 <span className="flex items-center gap-1">Server <FaGithub className="text-2xl" /></span>
               </Link>
             )}
+            {projectData[activeSlide - 1]?.github && (
+              <Link href={projectData[activeSlide - 1]?.github}>
+               <FaGithub className="text-2xl" />
+              </Link>
+            )}
             <Link href={`${projectData[activeSlide - 1]?.liveLink}`} passHref>
               <span className="flex items-center " target="_blank">
                 Live <TiArrowRightThick className="text-3xl text-red-500 " />
@@ -136,5 +141,8 @@ const projectData = [
     description:
       "A front-end project that allows users to easily book hotels for their holiday travels. The platform offers a user-friendly interface for selecting and reserving accommodations, helping travelers find the perfect stay for their vacations. The project features a dark theme for enhanced user experience and is fully responsive across all devices.",
     technologies: "Tailwind CSS, Material-UI, JavaScript, Firebase, React.js, Node.js, MongoDB,",
+    liveLink: 'https://hotel-booking-f7554.web.app',
+    githubClient: 'https://github.com/Nazrul144/hotel-booking-client-side',
+    githubServer: 'https://github.com/Nazrul144/hotel-booking-server-side'
   },
 ];
