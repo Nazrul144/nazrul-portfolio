@@ -18,7 +18,7 @@ const About = () => {
           </div>
         </div>
         <div className="lg:w-[60%] border-2 border-red-300">
-          <h1 className="text-xl lg:text-4xl font-extrabold mb-4">About Me</h1>
+          <h1 className="text-xl lg:text-4xl font-extrabold mb-4"><span className="text-red-600">About</span> Me</h1>
           <p className="text-justify text-gray-100 text-xs">
             I'm Nazru Islam, a MERN Stack Web Developer with expertise in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind
             CSS, and Material UI. I have hands-on experience building scalable web applications using the MERN stack, alongside
@@ -47,7 +47,7 @@ const About = () => {
                         {skills?.map((skill, index) => (
                           <Card
                             key={index}
-                            className="w-full aspect-square border border-white/30 hover:border-orange-500 rounded-lg p-6 transition-transform duration-300 group hover:scale-110 flex items-center justify-center"
+                            className="w-full aspect-square border border-white/30 hover:border-purple-600 rounded-lg p-6  group hover:scale-110 flex items-center justify-center  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
                             variant="borderless"
                             style={{
                               backgroundColor: "transparent",

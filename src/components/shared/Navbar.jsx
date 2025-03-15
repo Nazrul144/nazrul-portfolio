@@ -45,8 +45,8 @@ const Navbar = (props) => {
       path: '/skills'
     },
     {
-      title: 'Education',
-      path: '/education'
+      title: 'Contact',
+      path: '/contact'
     },
   ];
 
