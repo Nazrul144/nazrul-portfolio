@@ -1,4 +1,5 @@
 "use client";
+import Projects from "@/components/homePage/Projects";
 import { useTime, useTransform, motion, useSpring } from "framer-motion";
 import React, { useEffect } from "react";
 
@@ -26,7 +27,7 @@ const Page = () => {
 
   return (
     <div>
-      <h1>Projects</h1>
+        <Projects/>
       <div className="flex justify-center items-center gap-10">
         <div className="relative">
           <button className="z-10 relative bg-pink-800 rounded-full px-4 py-2 cursor-pointer hover:bg-green-400 duration-300 ease-in-out">Motion1</button>
@@ -35,21 +36,7 @@ const Page = () => {
          
 
         </div>
-        <div className="relative">
-          <button className="z-10 relative bg-cyan-500 px-20 py-16">Motion2</button>
-          <motion.div className="absolute  -inset-[12px]" style={{ background: rotatingBg, filter: pulseBg }} />
-        </div>
       </div>
-
-      <div className="relative">
-            <button className="z-10 relative bg-cyan-500 ">Love</button>
-
-            <div
-              className="absolute  -inset-[4px]"
-              style={{ background: "conic-gradient(#ff6a00, #ee0979, #8a2387, #1d2671, #009efd)" }}
-            />
-          </div>
-
 
     </div>
   );
