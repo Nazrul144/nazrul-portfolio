@@ -9,9 +9,9 @@ const Contact = () => {
   return (
     <div className="px-4 lg:px-20">
       <div className="lg:flex gap-12">
-        <div className="lg:max-w-[50%] border-2 border-red-500">
+        <div className="lg:max-w-[50%] lg:mt-24">
           <h1 className=" text-2xl lg:text-3xl font-extrabold mb-4">Let's Work Together</h1>
-          <p className="text-justify text-sm">
+          <p className="text-justify text-sm text-gray-100 ">
             I'm always open to exciting projects! Whether you're looking to create a website, build a web application, or just
             need some advice, I'd love to collaborate. Let's bring your ideas to life together. Feel free to reach out!
           </p>
@@ -91,9 +91,11 @@ const Contact = () => {
                   id=""
                   placeholder="Message"
                 ></textarea>
+                <div className="flex justify-center">
                 <Button type="submit" variant="contained" endIcon={<SendIcon />}>
                   Send Message
                 </Button>
+                </div>
               </form>
             </div>
           </div>

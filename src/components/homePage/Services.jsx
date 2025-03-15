@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Card } from "antd";
-import { FaBook, FaBullhorn, FaCode, FaImage, FaPaintBrush, FaPalette, FaVideo } from "react-icons/fa";
+import { FaBook, FaBullhorn, FaCode,  FaPaintBrush, FaPalette, FaVideo } from "react-icons/fa";
 import { GoArrowDownRight } from "react-icons/go";
 import Typewriter from "typewriter-effect";
 
