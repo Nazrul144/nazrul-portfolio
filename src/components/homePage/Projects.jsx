@@ -11,6 +11,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { EffectFlip, Pagination, Navigation } from "swiper/modules";
+import { TiArrowRightThick } from "react-icons/ti";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 const Projects = () => {
   const [activeSlide, setActiveSlide] = useState(1);
@@ -31,13 +34,17 @@ const Projects = () => {
                bg-gradient-to-r from-red-600 to-purple-700 
                drop-shadow-lg animate-pulse"
           >
-            01
+            0{activeSlide}
           </h1>
           <h1 className="font-extrabold text-2xl lg:text-3xl mt-4">Full Stack Project</h1>
           <h3 className="font-extrabold text-xl lg:text-2xl mt-3 mb-6">Website:</h3>
           <p className="text-justify text-gray-100 text-sm">A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.</p>
           <h4 className="text-white mt-4">Technologies:</h4>
           <hr className="mb-4 mt-3"/>
+          <div className="flex items-center gap-8 ">
+          <Link href="#"><FaGithub className="text-2xl" /></Link>
+          <Link href={"#"}><span className="flex items-center">Live <TiArrowRightThick className="text-3xl "/></span></Link>
+          </div>
         </div>
         <div className="lg:w-[50%] relative">
           <Swiper
