@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const skills = [
   "/skills/html.png", "/skills/css.png", "/skills/react.png", "/skills/javascript.png", 
-  "/skills/firebase.png"
+  "/skills/firebase.png", "/skills/material.png", "/skills/angular.png", "/skills/nextJs.png", "/skills/mongodb.png", "/skills/MySql.png", "/skills/antDesign.png"
 ];
 
 const About = () => {
