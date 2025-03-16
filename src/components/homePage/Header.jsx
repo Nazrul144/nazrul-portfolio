@@ -14,10 +14,6 @@ import { Card } from "antd";
 const Header = () => {
   const [showFullText, setShowFullText] = useState(false);
 
-
-
-  
-
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
 
@@ -143,12 +139,18 @@ const Header = () => {
       />
       <div className="px-4 lg:px-20">
         <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-14">
-          <motion.div 
-          initial={{x: -100, opacity:0}}
-          whileInView={{x:0, opacity:1}}
-          transition={{delay: 0.2, x:{type:"spring", stiffness:60}, opacity:{duration:1},ease: "easeIn", duration:1}}
-          className="lg:w-[50%]">
-            
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="lg:w-[50%]"
+          >
             <h1 className="font-extrabold text-xl lg:text-4xl mt-6 px-4 lg:px-0">
               <Typewriter
                 options={{
@@ -183,21 +185,40 @@ const Header = () => {
                 </span>
               )}
             </p>
-            <button
+            <motion.button
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 0.3,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 1,
+              }}
               onClick={() => setShowFullText(!showFullText)}
               className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold  cursor-pointer mt-4 hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out ml-4 lg:ml-0"
             >
               {showFullText ? "Read Less" : "Read More"}
-            </button>
+            </motion.button>
 
             <div className="flex items-center gap-8 ml-1 lg:ml-0 ">
-              <div>
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.3,
+                  x: { type: "spring", stiffness: 60 },
+                  opacity: { duration: 1 },
+                  ease: "easeIn",
+                  duration: 1,
+                }}
+              >
                 <button className="border-[1px] text-white rounded-full text-xs border-red-600 px-4 py-2 bg-transparent font-bold flex gap-2 items-center hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out mt-12">
                   <a className="flex items-center gap-2" href="/cover/cv.pdf" download="cv">
                     Download CV <FileDownload />
                   </a>
                 </button>
-              </div>
+              </motion.div>
               <div className="mt-12 flex gap-4 items-center">
                 <a href="https://github.com/Nazrul144" target="_blank">
                   <FaGithub className="text-2xl rounded-full text-white transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_4px_rgba(236,72,153,0.6)] hover:scale-110 hover:text-3xl" />
@@ -221,22 +242,50 @@ const Header = () => {
               </div>
             </div>
           </motion.div>
-          <div className="relative w-90 h-90 mt-10 lg:mt-1">
-            <Image className="z-10 relative brightness-50 hover:brightness-75 hover:touch-pinch-zoom" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="relative w-90 h-90 mt-10 lg:mt-1"
+          >
+            <Image
+              className="z-10 relative brightness-50 hover:brightness-75 hover:touch-pinch-zoom"
+              src="/cover/cove.png"
+              alt="Cover_Image"
+              width={600}
+              height={600}
+            />
             <motion.div
               className="absolute -inset-[4px] rounded-full "
               style={{ background: rotatingBg, filter: pulseBg }}
 
               //applying conic gradient color for border
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/*Status*/}
       <div className="px-4 lg:px-40 mt-14">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className=" h-32">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className=" h-32"
+          >
             <Card
               className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
               variant="borderless"
@@ -266,9 +315,20 @@ const Header = () => {
                 </h1>
               </motion.div>
             </Card>
-          </div>
+          </motion.div>
 
-          <div className=" h-32">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className=" h-32"
+          >
             <Card
               className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
               variant="borderless"
@@ -298,9 +358,20 @@ const Header = () => {
                 </h1>
               </motion.div>
             </Card>
-          </div>
+          </motion.div>
 
-          <div className=" h-32">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className=" h-32"
+          >
             <Card
               className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
               variant="borderless"
@@ -330,7 +401,7 @@ const Header = () => {
                 </h1>
               </motion.div>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

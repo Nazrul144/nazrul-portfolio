@@ -25,7 +25,7 @@ const skills = [
 const About = () => {
   return (
     <div className="px-4 lg:px-20">
-      <div className="lg:flex gap-6 mt-2 lg:mt-4">
+      <div className="lg:flex gap-6 ">
         <div className="lg:w-[40%] ">
           <div className="fireBorder lg:mt-20">
             <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={1000} height={1000}  layout="intrinsic" />
@@ -38,7 +38,7 @@ const About = () => {
             <span className="text-red-600">About</span> Me
           </h1>
           <p className="text-justify text-gray-100 text-sm">
-          I'm Nazru Islam, a MERN Stack Web Developer skilled in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind CSS, and Material UI. I specialize in building scalable web applications and enjoy creating user-friendly, impactful solutions. Passionate about continuous learning, collaboration, and contributing to meaningful projects, I thrive in team environments.
+          I'm Nazru Islam, a MERN Stack Web Developer skilled in React, Next.js, JavaScript, Firebase, MongoDB, Tailwind CSS, and Material UI. I specialize in building scalable web applications and enjoy creating user-friendly, impactful solutions. Passionate about continuous learning, collaboration, and contributing to meaningful projects.
           </p>
           {/*Tabs*/}
           <div className="mt-4 mb-4">
