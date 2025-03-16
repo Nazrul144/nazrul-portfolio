@@ -143,7 +143,12 @@ const Header = () => {
       />
       <div className="px-4 lg:px-20">
         <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-14">
-          <div className="lg:w-[50%]">
+          <motion.div 
+          initial={{x: -100, opacity:0}}
+          whileInView={{x:0, opacity:1}}
+          transition={{delay: 0.2, x:{type:"spring", stiffness:60}}}
+          className="lg:w-[50%]">
+            
             <h1 className="font-extrabold text-xl lg:text-4xl mt-6 px-4 lg:px-0">
               <Typewriter
                 options={{
@@ -215,7 +220,7 @@ const Header = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="relative w-90 h-90 mt-10 lg:mt-1">
             <Image className="z-10 relative brightness-50 hover:brightness-75 hover:touch-pinch-zoom" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
             <motion.div
