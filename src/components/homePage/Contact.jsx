@@ -1,50 +1,61 @@
-'use client'
+"use client";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { Button } from "@mui/material";
-import SendIcon from '@mui/icons-material/Send';
+import SendIcon from "@mui/icons-material/Send";
+import { motion } from "framer-motion";
 
 //Email Js:
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [message, setMessage] = useState("");
 
-    const [message, setMessage] = useState("")
+  const audio = new Audio("/success.m4a");
 
-    const audio = new Audio('/success.m4a');
+  const form = useRef();
 
-    const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs
-        .sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, {
-          publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_ID}`,
-        })
-        .then(
-          () => {
-            audio.play();
-            setMessage("Message has been sent successfully!")
-            form.current.reset()
-            setTimeout(()=>{
-                setMessage("")
-            },5000)
-            console.log('SUCCESS!');
-          },
-          (error) => {
-            console.log('FAILED...', error.text);
-          },
-        );
-    };
+    emailjs
+      .sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, form.current, {
+        publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_ID}`,
+      })
+      .then(
+        () => {
+          audio.play();
+          setMessage("Message has been sent successfully!");
+          form.current.reset();
+          setTimeout(() => {
+            setMessage("");
+          }, 5000);
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   return (
     <div className="px-4 lg:px-20">
       <div className="lg:flex gap-12">
-        <div className="lg:max-w-[50%] lg:mt-24">
-          <h1 className=" text-2xl lg:text-3xl font-extrabold mb-4">Let's Work Together</h1>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 1,
+            x: { type: "tween", duration: 0.7 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="lg:max-w-[50%] lg:mt-24"
+        >
+          <motion.h1 className=" text-2xl lg:text-3xl font-extrabold mb-4">Let's Work Together</motion.h1>
           <p className="text-justify text-sm text-gray-100 ">
             I'm always open to exciting projects! Whether you're looking to create a website, build a web application, or just
             need some advice, I'd love to collaborate. Let's bring your ideas to life together. Feel free to reach out!
@@ -78,12 +89,34 @@ const Contact = () => {
               <p className="text-sm text-gray-200">Mirpur 10, Dhaka, Bangladesh</p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="lg:max-w-[50%] border-[0.5px] border-white shadow-4xl  rounded-lg mt-6">
-          <h1 className="text-center font-extrabold text-white text-3xl mt-12">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 1,
+            x: { type: "tween", duration: 0.7 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="lg:max-w-[50%] border-[0.5px] border-white shadow-4xl  rounded-lg mt-6"
+        >
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "tween", duration: 0.7 },
+              opacity: { duration: 2 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="text-center font-extrabold text-white text-3xl mt-12"
+          >
             <span className="text-red-600">Contact</span> Me
-          </h1>
+          </motion.h1>
           {/*Contact Form*/}
           <div>
             {/* Form*/}
@@ -125,20 +158,27 @@ const Contact = () => {
                   id=""
                   placeholder="Message"
                 ></textarea>
-                <div className="flex justify-center">
-                <Button type="submit" variant="contained" endIcon={<SendIcon />}>
-                  Send Message
-                </Button>
-                </div>
-                <h1 className="text-center mt-4">
-                    {
-                        message? <span className="text-green-400">{message}</span>: ""
-                    }
-                </h1>
+                <motion.div
+                  initial={{  opacity: 0 }}
+                  animate={{  opacity: 1 }}
+                  transition={{
+                    delay: 1.2,
+                    x: { type: "spring", stiffness: 60 },
+                    opacity: { duration: 1 },
+                    ease: "easeIn",
+                    duration: 1,
+                  }}
+                  className="flex justify-center"
+                >
+                  <Button type="submit" variant="contained" endIcon={<SendIcon />}>
+                    Send Message
+                  </Button>
+                </motion.div>
+                <h1 className="text-center mt-4">{message ? <span className="text-green-400">{message}</span> : ""}</h1>
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

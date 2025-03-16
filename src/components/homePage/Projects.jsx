@@ -1,8 +1,9 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,9 +25,20 @@ const Projects = () => {
 
   return (
     <div className="px-4 lg:px-20 relative">
-      <h1 className="font-extrabold text-center text-4xl mb-4 ">
+      <motion.h1
+        initial={{  opacity: 0 }}
+        animate={{  opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 1,
+        }}
+        className="font-extrabold text-center text-4xl mb-4 "
+      >
         Latest <span className="text-red-600 ">Projects</span>
-      </h1>
+      </motion.h1>
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-[50%]">
           <h1
@@ -36,29 +48,92 @@ const Projects = () => {
           >
             0{activeSlide}
           </h1>
-          <h1 className="font-extrabold text-2xl lg:text-3xl mt-4">{projectData[activeSlide - 1]?.title}</h1>
-          <h3 className="mt-2 mb-6 text-white text-sm">
+          <motion.h1
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              x: { type: "tween", duration: 0.7 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="font-extrabold text-2xl lg:text-3xl mt-4"
+          >
+            {projectData[activeSlide - 1]?.title}
+          </motion.h1>
+          <motion.h3
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "tween", duration: 0.7 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="mt-2 mb-6 text-white text-sm"
+          >
             Website: <span className="text-orange-600">{projectData[activeSlide - 1]?.name}</span>
-          </h3>
-          <p className="text-justify text-gray-100 text-sm">{projectData[activeSlide - 1]?.description}</p>
-          <h4 className="text-white mt-4 text-sm">
+          </motion.h3>
+          <motion.p
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness:60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="text-justify text-gray-100 text-sm"
+          >
+            {projectData[activeSlide - 1]?.description}
+          </motion.p>
+          <motion.h4
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness:60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="text-white mt-4 text-sm"
+          >
             Technologies: <span className="text-green-500 text-sm">{projectData[activeSlide - 1]?.technologies}</span>
-          </h4>
+          </motion.h4>
           <hr className="mb-4 mt-3" />
-          <div className="flex items-center gap-8 ">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness:60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="flex items-center gap-8 "
+          >
             {projectData[activeSlide - 1]?.githubClient && (
               <Link href={projectData[activeSlide - 1]?.githubClient}>
-                <span className="flex items-center gap-1">Client <FaGithub className="text-2xl" /></span>
+                <span className="flex items-center gap-1">
+                  Client <FaGithub className="text-2xl" />
+                </span>
               </Link>
             )}
             {projectData[activeSlide - 1]?.githubServer && (
               <Link href={projectData[activeSlide - 1]?.githubServer}>
-                <span className="flex items-center gap-1">Server <FaGithub className="text-2xl" /></span>
+                <span className="flex items-center gap-1">
+                  Server <FaGithub className="text-2xl" />
+                </span>
               </Link>
             )}
             {projectData[activeSlide - 1]?.github && (
               <Link href={projectData[activeSlide - 1]?.github}>
-               <FaGithub className="text-2xl" />
+                <FaGithub className="text-2xl" />
               </Link>
             )}
             <Link href={`${projectData[activeSlide - 1]?.liveLink}`} passHref>
@@ -66,9 +141,20 @@ const Projects = () => {
                 Live <TiArrowRightThick className="text-3xl text-red-500 " />
               </span>
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className="lg:w-[50%] relative mt-8 lg:mt-0">
+        <motion.div
+          initial={{ x: 400, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 1,
+            x: { type: "spring", stiffness:60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="lg:w-[50%] relative mt-8 lg:mt-0"
+        >
           <Swiper
             initialSlide={0}
             effect={"flip"}
@@ -93,7 +179,7 @@ const Projects = () => {
               <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/4.jpg"} alt="Project1" width={500} height={500} />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -109,8 +195,8 @@ const projectData = [
     description:
       "A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.",
     technologies: "Tailwind CSS, Material-UI, JavaScript, React.js, Next.js, Node.js, MongoDB, Vercel",
-    github:"https://github.com/Nazrul144/car-doctor",
-    liveLink:""
+    github: "https://github.com/Nazrul144/car-doctor",
+    liveLink: "",
   },
 
   {
@@ -133,7 +219,7 @@ const projectData = [
       "A full-stack e-commerce project developed as a team. This website mainly focus on books where users can create a wishlist, browse and search for books, and explore various filtering options. The site includes features like a payment method, user reviews, live chat for customer support, and an admin dashboard for managing content. The platform is fully responsive, providing a seamless experience across devices.",
     technologies: "Tailwind CSS, Material-UI, AntDesign, shadcn, JavaScript, React.js, Next.js, Node.js, MongoDB, Vercel",
     github: "https://github.com/TeamElectroGen/ReadShop",
-    liveLink: 'https://readshop.vercel.app'
+    liveLink: "https://readshop.vercel.app",
   },
 
   {
@@ -143,8 +229,8 @@ const projectData = [
     description:
       "A front-end project that allows users to easily book hotels for their holiday travels. The platform offers a user-friendly interface for selecting and reserving accommodations, helping travelers find the perfect stay for their vacations. The project features a dark theme for enhanced user experience and is fully responsive across all devices.",
     technologies: "Tailwind CSS, Material-UI, JavaScript, Firebase, React.js, Node.js, MongoDB,",
-    liveLink: 'https://hotel-booking-f7554.web.app',
-    githubClient: 'https://github.com/Nazrul144/hotel-booking-client-side',
-    githubServer: 'https://github.com/Nazrul144/hotel-booking-server-side'
+    liveLink: "https://hotel-booking-f7554.web.app",
+    githubClient: "https://github.com/Nazrul144/hotel-booking-client-side",
+    githubServer: "https://github.com/Nazrul144/hotel-booking-server-side",
   },
 ];
