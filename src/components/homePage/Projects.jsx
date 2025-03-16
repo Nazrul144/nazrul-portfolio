@@ -68,7 +68,7 @@ const Projects = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:w-[50%] relative">
+        <div className="lg:w-[50%] relative mt-8 lg:mt-0">
           <Swiper
             initialSlide={0}
             effect={"flip"}
@@ -109,6 +109,8 @@ const projectData = [
     description:
       "A full-stack web application that allows users to easily access car services. It features user authentication with middleware, enabling users to view, update, and delete service details. The platform is fully responsive and includes private routes for secure access.",
     technologies: "Tailwind CSS, Material-UI, JavaScript, React.js, Next.js, Node.js, MongoDB, Vercel",
+    github:"https://github.com/Nazrul144/car-doctor",
+    liveLink:""
   },
 
   {
