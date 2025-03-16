@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Card } from "antd";
-import { FaBook, FaBullhorn, FaCode,  FaPaintBrush, FaPalette, FaVideo } from "react-icons/fa";
+import { FaBook, FaBullhorn, FaCode, FaPaintBrush, FaPalette, FaVideo } from "react-icons/fa";
 import { GoArrowDownRight } from "react-icons/go";
 import Typewriter from "typewriter-effect";
-
+import { motion } from "framer-motion";
 const Services = () => {
   const [services, setServices] = useState([]);
 
@@ -28,35 +28,45 @@ const Services = () => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {services?.map((service, index) => (
-         <Card
-         key={index}
-         className="w-full border border-white/30 hover:border-orange-500 rounded-lg p-4 transition-all duration-300 group hover:scale-105 hover:border-[1px] hover:border-gradient-to-r hover:from-red-500 hover:to-orange-500 shadow-2xl"
-         title={
-           <div className="flex items-center justify-between text-white transition-all duration-300">
-             {/* Left Icon */}
-             <div className="group-hover:text-orange-500">
-               {React.cloneElement(service.icon, { className: "text-2xl" })}
-             </div>
-             
-             {/* Title */}
-             <span className="text-xl group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
-               {service.title}
-             </span>
-       
-             {/* Right Icon */}
-             <GoArrowDownRight className="text-2xl group-hover:text-orange-500 font-bold border-2 border-gray-500 rounded-full" />
-           </div>
-         }
-         variant="borderless"
-         style={{
-           maxWidth: "100%",
-           backgroundColor: "transparent",
-           color: "white",
-         }}
-       >
-         <p className="text-justify">{service.intro}</p>
-       </Card>
-       
+          <motion.div
+            initial={{ x: index < 3 ? -500 : 500 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.4 + index * 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              damping: 55,
+              ease: "easeIn",
+              duration: 1,
+            }}
+          >
+            <Card
+              key={index}
+              className="w-full border border-white/30 hover:border-orange-500 rounded-lg p-4 transition-all duration-300 group hover:scale-105 hover:border-[1px] hover:border-gradient-to-r hover:from-red-500 hover:to-orange-500 shadow-2xl"
+              title={
+                <div className="flex items-center justify-between text-white transition-all duration-300">
+                  {/* Left Icon */}
+                  <div className="group-hover:text-orange-500">{React.cloneElement(service.icon, { className: "text-2xl" })}</div>
+
+                  {/* Title */}
+                  <span className="text-xl group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-orange-500 group-hover:bg-clip-text transition-all duration-300">
+                    {service.title}
+                  </span>
+
+                  {/* Right Icon */}
+                  <GoArrowDownRight className="text-2xl group-hover:text-orange-500 font-bold border-2 border-gray-500 rounded-full" />
+                </div>
+              }
+              variant="borderless"
+              style={{
+                maxWidth: "100%",
+                backgroundColor: "transparent",
+                color: "white",
+              }}
+            >
+              <p className="text-justify">{service.intro}</p>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </div>
