@@ -10,10 +10,12 @@ import { FaFacebook, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import Typewriter from "typewriter-effect";
 import { Card } from "antd";
-import { motion } from "framer-motion";
 
 const Header = () => {
   const [showFullText, setShowFullText] = useState(false);
+
+
+  
 
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
@@ -139,7 +141,7 @@ const Header = () => {
         }}
       />
       <div className="px-4 lg:px-20">
-        <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-20">
+        <div className="flex flex-col-reverse lg:flex-row  items-center lg:gap-32 lg:mt-14">
           <div className="lg:w-[50%]">
             <h1 className="font-extrabold text-xl lg:text-4xl mt-6 px-4 lg:px-0">
               <Typewriter
@@ -224,29 +226,105 @@ const Header = () => {
           </div>
         </div>
       </div>
+
       {/*Status*/}
-      <div className="px-4 lg:px-20">
-        <div>
-          <div>
+      <div className="px-4 lg:px-40 mt-14">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div className=" h-32">
             <Card
-              className="w-full aspect-square border border-white/30 hover:border-purple-600 rounded-lg p-6  group hover:scale-110 flex items-center justify-center  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
+              className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
               variant="borderless"
               style={{
                 backgroundColor: "transparent",
                 color: "white",
+                boxShadow: "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)",
+                transition: "box-shadow 0.4s ease-in-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(255, 0, 100, 0.9), 0 0 50px rgba(180, 0, 200, 0.9), 0 0 70px rgba(100, 0, 255, 0.9)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)";
               }}
             >
               <motion.div
-                animate={{ rotate: [10, -10, 10] }} // Tilting motion
-                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                animate={{ rotate: [5, -5, 5] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 style={{ originX: 0.5, originY: 0.5 }}
               >
-                <h1>Lovely</h1>
+                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">20+</h1>
+                <h1 className="text-center text-2xl font-extrabold text-white drop-shadow-[0_0_10px_rgb(180,0,200)]">
+                  Projects Completed
+                </h1>
               </motion.div>
             </Card>
           </div>
-          <div></div>
-          <div></div>
+
+          <div className=" h-32">
+            <Card
+              className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
+              variant="borderless"
+              style={{
+                backgroundColor: "transparent",
+                color: "white",
+                boxShadow: "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)",
+                transition: "box-shadow 0.4s ease-in-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(255, 0, 100, 0.9), 0 0 50px rgba(180, 0, 200, 0.9), 0 0 70px rgba(100, 0, 255, 0.9)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)";
+              }}
+            >
+              <motion.div
+                animate={{ rotate: [5, -5, 5] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                style={{ originX: 0.5, originY: 0.5 }}
+              >
+                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">10+</h1>
+                <h1 className="text-center text-2xl font-extrabold text-white drop-shadow-[0_0_10px_rgb(180,0,200)]">
+                  Technologies Mastered
+                </h1>
+              </motion.div>
+            </Card>
+          </div>
+
+          <div className=" h-32">
+            <Card
+              className="w-full h-full aspect-square border border-transparent rounded-lg p-6 group hover:scale-110 flex items-center justify-center transition-all duration-300 ease-in-out"
+              variant="borderless"
+              style={{
+                backgroundColor: "transparent",
+                color: "white",
+                boxShadow: "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)",
+                transition: "box-shadow 0.4s ease-in-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(255, 0, 100, 0.9), 0 0 50px rgba(180, 0, 200, 0.9), 0 0 70px rgba(100, 0, 255, 0.9)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 20px rgba(255, 0, 100, 0.7), 0 0 40px rgba(180, 0, 200, 0.7), 0 0 60px rgba(100, 0, 255, 0.7)";
+              }}
+            >
+              <motion.div
+                animate={{ rotate: [5, -5, 5] }}
+                transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                style={{ originX: 0.5, originY: 0.5 }}
+              >
+                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">507</h1>
+                <h1 className="text-center text-2xl font-extrabold text-white drop-shadow-[0_0_10px_rgb(180,0,200)]">
+                  Total Commits
+                </h1>
+              </motion.div>
+            </Card>
+          </div>
         </div>
       </div>
     </div>
