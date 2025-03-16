@@ -223,6 +223,16 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/*Status*/}
+      <div className="px-4 lg:px-20">
+        <div>
+          <div>
+            
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };
