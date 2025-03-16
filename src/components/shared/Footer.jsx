@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="text-center">
         <motion.h2
           initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x:0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{
-            delay: 1,
+            delay: 0.8,
             x: { type: "spring", stiffness: 60 },
             opacity: { duration: 1 },
             ease: "easeIn",
@@ -27,7 +27,7 @@ const Footer = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.3,
+              delay: 0.1,
               x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
@@ -44,7 +44,7 @@ const Footer = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.5,
+              delay: 0.2,
               x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
@@ -61,7 +61,7 @@ const Footer = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.7,
+              delay: 0.3,
               x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
@@ -78,7 +78,7 @@ const Footer = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 0.9,
+              delay: 0.4,
               x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
@@ -95,7 +95,7 @@ const Footer = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{
-              delay: 1,
+              delay: 0.5,
               x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
@@ -110,17 +110,20 @@ const Footer = () => {
           </motion.a>
         </div>
       </div>
-      <motion.h3 
-       initial={{ x:100, opacity: 0 }}
-       whileInView={{ x:0, opacity: 1 }}
-       transition={{
-         delay: 1.2,
-         x: { type: "spring", stiffness: 60 },
-         opacity: { duration: 1 },
-         ease: "easeIn",
-         duration: 1,
-       }}
-      className="text-center text-sm text-gray-400 mt-6">Copyright © 2025 - All rights reserved by Nazrul Islam</motion.h3>
+      <motion.h3
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.8,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 1,
+        }}
+        className="text-center text-sm text-gray-400 mt-6"
+      >
+        Copyright © 2025 - All rights reserved by Nazrul Islam
+      </motion.h3>
     </div>
   );
 };
