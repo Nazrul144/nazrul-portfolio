@@ -86,7 +86,9 @@ const About = () => {
               items={[
                 {
                   label: (
-                    <span className="relative inline-flex items-center z-10 text-white  bg-transparent border-[1px] border-gray-300 px-2 py-1 rounded-lg  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out">
+                    <span
+                      className="relative inline-flex items-center z-10 text-white  bg-transparent border-[1px] border-gray-300 px-2 py-1 rounded-lg  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
+                    >
                       Skills
                     </span>
                   ),
@@ -94,7 +96,7 @@ const About = () => {
                   children: (
                     <div className="text-white">
                       <motion.div
-                        initial={{ x: -100, opacity: 0 }}
+                        initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{
                           delay: 0.2,
