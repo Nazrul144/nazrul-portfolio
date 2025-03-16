@@ -26,14 +26,14 @@ const About = () => {
     <div className="px-4 lg:px-20">
       <div className="lg:flex gap-6 mt-2 lg:mt-4">
         <div className="lg:w-[40%] ">
-          <div className="fireBorder ml-14 lg:ml-32 lg:mt-20">
+          <div className="fireBorder lg:mt-20">
             <Image className="brightness-75" src={"/about/cover11.png"} alt="About_image" width={1000} height={1000}  layout="intrinsic" />
           </div>
-          <h1 className="text-center mt-4 font-bold animate-pulse bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-  MERN Stack Developer</h1>
+          <h1 className=" ml-24 lg:ml-28 mt-4 font-bold animate-pulse bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+          MERN Stack Developer</h1>
         </div>
         <div className="lg:w-[60%]">
-          <h1 className="text-xl lg:text-3xl font-extrabold mb-2">
+          <h1 className="text-xl lg:text-3xl font-extrabold mb-2 mt-4 lg:mt-0">
             <span className="text-red-600">About</span> Me
           </h1>
           <p className="text-justify text-gray-100 text-sm">
@@ -56,11 +56,11 @@ const About = () => {
                   key: "1",
                   children: (
                     <div className="text-white">
-                      <div className="grid grid-cols-5 gap-4 px-8 py-4">
+                      <div className="grid grid-cols-5 gap-4 px-2 py-1 lg:px-8 lg:py-4">
                         {skills?.map((skill, index) => (
                           <Card
                             key={index}
-                            className="w-full aspect-square border border-white/30 hover:border-purple-600 rounded-lg p-6  group hover:scale-110 flex items-center justify-center  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
+                            className="w-full aspect-square border border-white/30 hover:border-purple-600 rounded-lg lg:p-6  group hover:scale-110 flex items-center justify-center  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
                             variant="borderless"
                             style={{
                               backgroundColor: "transparent",
@@ -89,8 +89,8 @@ const About = () => {
                   key: "3",
                   children: (
                     <div>
-                      <h1 className="font-bold text-2xl text-white">My Experience</h1>
-                      <p className="text-gray-100 text-justify mt-4 text-xs mb-8">
+                      <h1 className="font-bold text-xl text-white px-4">My <span className="text-red-600">Experience</span></h1>
+                      <p className="text-gray-100 text-justify mt-4 text-xs mb-8 px-4">
                         I have gained valuable experience in various fields, including video editing, Photoshop, and web
                         development. My expertise in teaching English from 2018 to 2024 has strengthened my communication skills.
                         Additionally, I have worked as a web developer since 2023, with hands-on experience in e-commerce project
@@ -146,8 +146,8 @@ const About = () => {
                   key: "2",
                   children: (
                     <div>
-                      <h1 className="font-bold text-2xl text-white">My Education</h1>
-                      <p className="text-gray-100 text-justify mt-4 text-xs mb-8">
+                      <h1 className="font-bold text-xl text-white px-4">My <span className="text-red-600">Education</span></h1>
+                      <p className="text-gray-100 text-justify mt-4 text-xs mb-8 px-4">
                         I hold a B.Sc. in Computer Science and Engineering from Green University of Bangladesh, with a strong
                         foundation. My education has equipped me with a blend of technical skills, critical thinking, and
                         problem-solving abilities, preparing me to contribute effectively in the field of technology.
