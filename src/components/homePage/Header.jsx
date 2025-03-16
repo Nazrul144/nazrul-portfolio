@@ -1,5 +1,4 @@
 "use client";
-
 import { FileDownload } from "@mui/icons-material";
 import { useTime, useTransform, motion, useSpring } from "framer-motion";
 import Image from "next/image";
@@ -10,6 +9,8 @@ import { loadSlim } from "tsparticles-slim";
 import { FaFacebook, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import Typewriter from "typewriter-effect";
+import { Card } from "antd";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [showFullText, setShowFullText] = useState(false);
@@ -227,7 +228,22 @@ const Header = () => {
       <div className="px-4 lg:px-20">
         <div>
           <div>
-            
+            <Card
+              className="w-full aspect-square border border-white/30 hover:border-purple-600 rounded-lg p-6  group hover:scale-110 flex items-center justify-center  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
+              variant="borderless"
+              style={{
+                backgroundColor: "transparent",
+                color: "white",
+              }}
+            >
+              <motion.div
+                animate={{ rotate: [10, -10, 10] }} // Tilting motion
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                style={{ originX: 0.5, originY: 0.5 }}
+              >
+                <h1>Lovely</h1>
+              </motion.div>
+            </Card>
           </div>
           <div></div>
           <div></div>
