@@ -13,7 +13,7 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const [message, setMessage] = useState("");
 
-  const audio = new Audio("/success.mp3");
+  // const audio = new Audio("/success.mp3");
 
   const form = useRef();
 
@@ -26,7 +26,7 @@ const Contact = () => {
       })
       .then(
         () => {
-          audio.play();
+          // audio.play();
           setMessage("Message has been sent successfully!");
           form.current.reset();
           setTimeout(() => {
