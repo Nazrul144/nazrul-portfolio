@@ -21,6 +21,7 @@ const skills = [
   "/skills/MySql.png",
 ];
 
+
 const About = () => {
   return (
     <div className="px-4 lg:px-20">

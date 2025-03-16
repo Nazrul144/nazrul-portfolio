@@ -22,11 +22,10 @@ const merriweather = Merriweather({
 });
 
 export const metadata = {
-  title: {
-    default : "Portfolio",
-    template: "%s | Portfolio", 
-  },
-  
+  title:{
+    default: "Nazrul's Portfolio",
+    template: "%s | Portfolio"
+  }
 };
 
 export default function RootLayout({ children }) {

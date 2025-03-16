@@ -15,6 +15,7 @@ const Header = () => {
   const [showFullText, setShowFullText] = useState(false);
 
 
+
   
 
   const particlesInit = useCallback(async (engine) => {
@@ -216,7 +217,7 @@ const Header = () => {
             </div>
           </div>
           <div className="relative w-90 h-90 mt-10 lg:mt-1">
-            <Image className="z-10 relative brightness-50" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
+            <Image className="z-10 relative brightness-50 hover:brightness-75 hover:touch-pinch-zoom" src="/cover/cove.png" alt="Cover_Image" width={600} height={600} />
             <motion.div
               className="absolute -inset-[4px] rounded-full "
               style={{ background: rotatingBg, filter: pulseBg }}
@@ -318,7 +319,7 @@ const Header = () => {
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 style={{ originX: 0.5, originY: 0.5 }}
               >
-                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">507</h1>
+                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">20+</h1>
                 <h1 className="text-center text-2xl font-extrabold text-white drop-shadow-[0_0_10px_rgb(180,0,200)]">
                   Total Commits
                 </h1>
