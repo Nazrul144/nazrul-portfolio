@@ -13,7 +13,7 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const [message, setMessage] = useState("");
 
-  const audio = new Audio("/success.m4a");
+  const audio = new Audio("/success.mp3");
 
   const form = useRef();
 
@@ -159,8 +159,8 @@ const Contact = () => {
                   placeholder="Message"
                 ></textarea>
                 <motion.div
-                  initial={{  opacity: 0 }}
-                  animate={{  opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   transition={{
                     delay: 1.2,
                     x: { type: "spring", stiffness: 60 },
