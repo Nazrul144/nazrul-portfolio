@@ -58,7 +58,7 @@ const Projects = () => {
               ease: "easeIn",
               duration: 1,
             }}
-            className="font-extrabold text-2xl lg:text-3xl mt-4"
+            className="font-extrabold text-2xl lg:text-3xl mt-4 text-white"
           >
             {projectData[activeSlide - 1]?.title}
           </motion.h1>
@@ -173,10 +173,10 @@ const Projects = () => {
               <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/2.png"} alt="Project1" width={500} height={500} />
             </SwiperSlide>
             <SwiperSlide>
-              <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/3.jpg"} alt="Project1" width={500} height={500} />
+              <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/4.jpg"} alt="Project1" width={500} height={500} />
             </SwiperSlide>
             <SwiperSlide>
-              <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/4.jpg"} alt="Project1" width={500} height={500} />
+              <Image className="lg:ml-28 lg:mt-12" src={"/projects_image/3.jpg"} alt="Project1" width={500} height={500} />
             </SwiperSlide>
           </Swiper>
         </motion.div>
