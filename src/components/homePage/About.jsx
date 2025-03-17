@@ -77,7 +77,18 @@ const About = () => {
             solutions. Passionate about continuous learning, collaboration, and contributing to meaningful projects.
           </motion.p>
           {/*Tabs*/}
-          <div className="mt-4 mb-4">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="mt-4 mb-4"
+          >
             <Tabs
               className="border-[1px] border-gray-100 rounded-lg"
               defaultActiveKey="1"
@@ -94,8 +105,8 @@ const About = () => {
                   children: (
                     <div className="text-white">
                       <motion.div
-                        initial={{ x: 100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
                         transition={{
                           delay: 0.2,
                           x: { type: "spring", stiffness: 60 },
@@ -137,16 +148,49 @@ const About = () => {
                   key: "3",
                   children: (
                     <div>
-                      <h1 className="font-bold text-xl text-white px-4">
+                      <motion.h1
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          delay: 0.2,
+                          x: { type: "spring", stiffness: 60 },
+                          opacity: { duration: 1 },
+                          ease: "easeIn",
+                          duration: 1,
+                        }}
+                        className="font-bold text-xl text-white px-4"
+                      >
                         My <span className="text-red-600">Experience</span>
-                      </h1>
-                      <p className="text-gray-100 text-justify mt-4 text-xs mb-8 px-4">
+                      </motion.h1>
+                      <motion.p
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          delay: 0.2,
+                          x: { type: "spring", stiffness: 60 },
+                          opacity: { duration: 1 },
+                          ease: "easeIn",
+                          duration: 1,
+                        }}
+                        className="text-gray-100 text-justify mt-4 text-xs mb-8 px-4"
+                      >
                         I have gained valuable experience in various fields, including video editing, Photoshop, and web
                         development. My expertise in teaching English from 2018 to 2024 has strengthened my communication skills.
                         Additionally, I have worked as a web developer since 2023, with hands-on experience in e-commerce project
                         development and training in web development at Decode Lab.
-                      </p>
-                      <table className="table-auto w-full mt-8">
+                      </motion.p>
+                      <motion.table
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          delay: 0.5,
+                          x: { type: "spring", stiffness: 60 },
+                          opacity: { duration: 1 },
+                          ease: "easeIn",
+                          duration: 1,
+                        }}
+                        className="table-auto w-full mt-8"
+                      >
                         <thead>
                           <tr className="border-b">
                             <th className="text-left p-4 text-gray-100">Duration</th>
@@ -183,7 +227,7 @@ const About = () => {
                             <td className="p-4 text-gray-100">Teaching English</td>
                           </tr>
                         </tbody>
-                      </table>
+                      </motion.table>
                     </div>
                   ),
                 },
@@ -195,7 +239,17 @@ const About = () => {
                   ),
                   key: "2",
                   children: (
-                    <div>
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{
+                        delay: 1,
+                        x: { type: "spring", stiffness: 60 },
+                        opacity: { duration: 1 },
+                        ease: "easeIn",
+                        duration: 1,
+                      }}
+                    >
                       <h1 className="font-bold text-xl text-white px-4">
                         My <span className="text-red-600">Education</span>
                       </h1>
@@ -231,12 +285,12 @@ const About = () => {
                           </tr>
                         </tbody>
                       </table>
-                    </div>
+                    </motion.div>
                   ),
                 },
               ]}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
