@@ -151,7 +151,7 @@ const Header = () => {
             }}
             className="lg:w-[50%]"
           >
-            <h1 className="font-extrabold text-xl lg:text-4xl mt-6 px-4 lg:px-0">
+            <h1 className="font-extrabold text-xl text-white lg:text-4xl mt-6 px-4 lg:px-0">
               <Typewriter
                 options={{
                   strings: ['Hi, I am <span class="text-red-600">Nazrul</span> Islam'],
@@ -161,7 +161,7 @@ const Header = () => {
                 }}
               />
             </h1>
-            <h1 className="mt-4 px-4 lg:px-0">
+            <h1 className="mt-4 px-4 lg:px-0 text-white">
               <Typewriter
                 options={{
                   strings: ['<span class="text-red-600 lg:font-extrabold shadow-2xl">Frontend</span> Web Developer'],

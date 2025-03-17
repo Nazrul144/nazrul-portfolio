@@ -56,7 +56,7 @@ const About = () => {
               ease: "easeIn",
               duration: 1,
             }}
-            className="text-xl lg:text-3xl font-extrabold mb-2 mt-4 lg:mt-0"
+            className="text-xl lg:text-3xl text-white font-extrabold mb-2 mt-4 lg:mt-0"
           >
             <span className="text-red-600">About</span> Me
           </motion.h1>
@@ -86,9 +86,7 @@ const About = () => {
               items={[
                 {
                   label: (
-                    <span
-                      className="relative inline-flex items-center z-10 text-white  bg-transparent border-[1px] border-gray-300 px-2 py-1 rounded-lg  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out"
-                    >
+                    <span className="relative inline-flex items-center z-10 text-white  bg-transparent border-[1px] border-gray-300 px-2 py-1 rounded-lg  hover:bg-pink-600 hover:shadow-[0_0_20px_5px_rgba(236,72,153,0.6)] transition-all duration-300 ease-in-out">
                       Skills
                     </span>
                   ),
