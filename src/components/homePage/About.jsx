@@ -18,7 +18,7 @@ const skills = [
   "/skills/nodejs.png",
   "/skills/firebase.webp",
   "/skills/MongoDB.png",
-  "/skills/mysql.png",
+  "/skills/sql.png",
 ];
 
 const About = () => {
