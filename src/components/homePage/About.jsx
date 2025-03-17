@@ -12,13 +12,13 @@ const skills = [
   "/skills/antDesign.png",
   "/skills/javaScript.png",
   "/skills/react.png",
-  "/skills/nextjs.png",
+  "/skills/next.png",
   "/skills/angular.png",
   "/skills/redux.png",
   "/skills/nodejs.png",
   "/skills/firebase.webp",
   "/skills/MongoDB.png",
-  "/skills/MySql.png",
+  "/skills/mysql.png",
 ];
 
 const About = () => {
