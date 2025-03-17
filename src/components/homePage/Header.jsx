@@ -395,7 +395,7 @@ const Header = () => {
                 transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 style={{ originX: 0.5, originY: 0.5 }}
               >
-                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">20+</h1>
+                <h1 className="text-center text-3xl font-extrabold text-white drop-shadow-[0_0_15px_rgb(255,0,100)]">543</h1>
                 <h1 className="text-center text-2xl font-extrabold text-white drop-shadow-[0_0_10px_rgb(180,0,200)]">
                   Total Commits
                 </h1>
