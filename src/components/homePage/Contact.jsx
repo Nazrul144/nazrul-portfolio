@@ -55,12 +55,23 @@ const Contact = () => {
           }}
           className="lg:max-w-[50%] lg:mt-24"
         >
-          <motion.h1 className=" text-2xl lg:text-3xl font-extrabold mb-4">Let's Work Together</motion.h1>
+          <motion.h1 className=" text-2xl lg:text-3xl font-extrabold mb-4 text-white">Let's Work Together</motion.h1>
           <p className="text-justify text-sm text-gray-100 ">
             I'm always open to exciting projects! Whether you're looking to create a website, build a web application, or just
             need some advice, I'd love to collaborate. Let's bring your ideas to life together. Feel free to reach out!
           </p>
-          <div className="flex items-center gap-4 mt-6">
+          <motion.div
+            initial={{ x: 150, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="flex items-center gap-4 mt-6"
+          >
             <div>
               <FaPhoneAlt className="text-4xl text-red-600 p-2 bg-gray-300 rounded-sm " />
             </div>
@@ -68,9 +79,20 @@ const Contact = () => {
               <p className="text-sm font-semibold text-red-600">Phone</p>
               <p className="text-sm text-gray-200">+88 01758752528</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex items-center gap-4 mt-6">
+          <motion.div
+            initial={{ x: -150, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="flex items-center gap-4 mt-6"
+          >
             <div>
               <MdEmail className="text-4xl text-red-600 p-2 bg-gray-300 rounded-sm " />
             </div>
@@ -78,9 +100,20 @@ const Contact = () => {
               <p className="text-sm font-semibold text-red-600">Email</p>
               <p className="text-sm text-gray-200">nazrulislam.cse28@gmail.com</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex items-center gap-4 mt-6">
+          <motion.div
+            initial={{ x: 150, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="flex items-center gap-4 mt-6"
+          >
             <div>
               <FaLocationDot className="text-4xl text-red-600 p-2 bg-gray-300 rounded-sm " />
             </div>
@@ -88,7 +121,7 @@ const Contact = () => {
               <p className="text-sm font-semibold text-red-500">Address</p>
               <p className="text-sm text-gray-200">Mirpur 10, Dhaka, Bangladesh</p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
@@ -120,7 +153,7 @@ const Contact = () => {
           {/*Contact Form*/}
           <div>
             {/* Form*/}
-            <div className="bg-transparent  my-12 rounded-lg lg:px-16 ">
+            <div className="bg-transparent  my-12 rounded-lg lg:px-16 text-white ">
               <form ref={form} onSubmit={sendEmail}>
                 <div className="grid grid-cols-2 gap-5 w-full">
                   <input

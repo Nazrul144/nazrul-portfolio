@@ -24,8 +24,8 @@ const Footer = () => {
         </motion.h2>
         <div className="flex justify-center gap-6 mb-6">
           <motion.a
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.1,
               x: { type: "spring", stiffness: 60 },
@@ -41,8 +41,8 @@ const Footer = () => {
             <FaGithub />
           </motion.a>
           <motion.a
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.2,
               x: { type: "spring", stiffness: 60 },
@@ -58,8 +58,8 @@ const Footer = () => {
             <TiSocialLinkedinCircular />
           </motion.a>
           <motion.a
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.3,
               x: { type: "spring", stiffness: 60 },
@@ -75,8 +75,8 @@ const Footer = () => {
             <FaTwitter />
           </motion.a>
           <motion.a
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.4,
               x: { type: "spring", stiffness: 60 },
@@ -92,8 +92,8 @@ const Footer = () => {
             <FaFacebook />
           </motion.a>
           <motion.a
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{
               delay: 0.5,
               x: { type: "spring", stiffness: 60 },
