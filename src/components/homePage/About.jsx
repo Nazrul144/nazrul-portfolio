@@ -218,9 +218,7 @@ const About = () => {
                           </tr>
                           <tr className="border-b">
                             <td className="p-4 text-pink-500 font-bold">2018</td>
-                            <td className="p-4 text-gray-100">
-                              IELTS (International English Language Testing System) - Band Score: 6.5
-                            </td>
+                            <td className="p-4 text-gray-100">IELTS (International English Language Testing System)</td>
                           </tr>
 
                           <tr className="border-b">
