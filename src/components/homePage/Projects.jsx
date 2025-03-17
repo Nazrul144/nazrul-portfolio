@@ -26,8 +26,8 @@ const Projects = () => {
   return (
     <div className="px-4 lg:px-20 relative">
       <motion.h1
-        initial={{  opacity: 0 }}
-        animate={{  opacity: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           delay: 0.2,
           x: { type: "spring", stiffness: 60 },
@@ -35,7 +35,7 @@ const Projects = () => {
           ease: "easeIn",
           duration: 1,
         }}
-        className="font-extrabold text-center text-4xl mb-4 "
+        className="font-extrabold text-center text-4xl mb-4 text-white "
       >
         Latest <span className="text-red-600 ">Projects</span>
       </motion.h1>
@@ -43,7 +43,7 @@ const Projects = () => {
         <div className="lg:w-[50%]">
           <h1
             className="font-extrabold text-5xl text-transparent bg-clip-text 
-               bg-gradient-to-r from-red-600 to-purple-700 
+               bg-gradient-to-r from-white to-purple-700 
                drop-shadow-lg animate-pulse"
           >
             0{activeSlide}
@@ -81,7 +81,7 @@ const Projects = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 1,
-              x: { type: "spring", stiffness:60 },
+              x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
               duration: 1,
@@ -95,7 +95,7 @@ const Projects = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 1,
-              x: { type: "spring", stiffness:60 },
+              x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
               duration: 1,
@@ -110,12 +110,12 @@ const Projects = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{
               delay: 1,
-              x: { type: "spring", stiffness:60 },
+              x: { type: "spring", stiffness: 60 },
               opacity: { duration: 1 },
               ease: "easeIn",
               duration: 1,
             }}
-            className="flex items-center gap-8 "
+            className="flex items-center gap-8 text-white"
           >
             {projectData[activeSlide - 1]?.githubClient && (
               <Link href={projectData[activeSlide - 1]?.githubClient}>
@@ -148,7 +148,7 @@ const Projects = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{
             delay: 1,
-            x: { type: "spring", stiffness:60 },
+            x: { type: "spring", stiffness: 60 },
             opacity: { duration: 1 },
             ease: "easeIn",
             duration: 1,

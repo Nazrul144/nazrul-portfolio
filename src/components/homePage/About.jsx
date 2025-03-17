@@ -103,7 +103,7 @@ const About = () => {
                           ease: "easeIn",
                           duration: 1,
                         }}
-                        className="grid grid-cols-5 gap-4 px-2 py-1 lg:px-8 lg:py-4"
+                        className="grid grid-cols-5 gap-4 px-2 py-1 lg:px-8 lg:py-8"
                       >
                         {skills?.map((skill, index) => (
                           <Card
@@ -120,7 +120,7 @@ const About = () => {
                               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
                               style={{ originX: 0.5, originY: 0.5 }}
                             >
-                              <Image src={skill} alt="Image" width={80} height={80} />
+                              <Image src={skill} alt="Image" width={100} height={100} />
                             </motion.div>
                           </Card>
                         ))}

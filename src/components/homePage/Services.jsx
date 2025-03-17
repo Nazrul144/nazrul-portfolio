@@ -16,7 +16,7 @@ const Services = () => {
 
   return (
     <div className="lg:px-20 px-4">
-      <h1 className="font-extrabold text-4xl text-center mt-4 lg:mt-8 mb-12">
+      <h1 className="font-extrabold text-4xl text-center mt-4 lg:mt-8 mb-12 text-white">
         <Typewriter
           options={{
             strings: ['My <span class="text-red-600">Services</span>'],
